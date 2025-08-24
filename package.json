@@ -1,0 +1,17 @@
+{
+  "name": "vulnerable-bank",
+  "version": "1.0.0",
+  "description": "A deliberately vulnerable web application for security auditing labs.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "University Lab",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "2.5.7",
+    "express": "4.16.0",
+    "sqlite3": "^5.0.2"
+  }
+}

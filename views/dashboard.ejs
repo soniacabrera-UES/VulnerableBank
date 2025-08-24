@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - VulnerableBank</title>
+  <style>
+    body { font-family: sans-serif; background-color: #f4f4f9; margin: 0; padding: 2rem; }
+    .dashboard-container { max-width: 800px; margin: auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+    h1 { color: #333; }
+    .balance { font-size: 2rem; color: #28a745; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <div class="dashboard-container">
+    
+    <!-- VULNERABILITY FOR OWASP ZAP (Cross-Site Scripting - XSS) -->
+    <!-- The <%- %> tag in EJS outputs unescaped data. -->
+    <!-- An attacker can create a username like <script>alert('XSS')</script> -->
+    <!-- and the script will execute in the browser of the logged-in user. -->
+    <h1>Welcome, <%- username %>!</h1>
+    <!-- ----------------------------------------------------------------- -->
+
+    <p>Your current balance is:</p>
+    <div class="balance">$<%= balance %></div>
+  </div>
+</body>
+</html>
