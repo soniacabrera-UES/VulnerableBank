@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 3000;
 // A developer accidentally left a hardcoded secret here.
 const OLD_DB_CONNECTION_STRING = "postgres://admin:supersecretpassword123!@db.legacy.vulnerable.bank/prod";
 // -----------------------------------------
+// -----------------------------------------
 
 // Middleware to parse form data
 app.use(express.urlencoded({ extended: true }));
@@ -57,4 +58,5 @@ app.post('/login', (req, res) => {
 app.listen(PORT, () => {
   console.log(`VulnerableBank server running on http://localhost:${PORT}`);
 });
+
 
