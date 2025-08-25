@@ -1,6 +1,6 @@
 // server.js
 // Main application file for VulnerableBank
-
+//
 const express = require('express');
 const path = require('path');
 const db = require('./database.js');
@@ -57,3 +57,4 @@ app.post('/login', (req, res) => {
 app.listen(PORT, () => {
   console.log(`VulnerableBank server running on http://localhost:${PORT}`);
 });
+
